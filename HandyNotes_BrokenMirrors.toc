@@ -1,0 +1,11 @@
+## Interface: 90005
+## Title: HandyNotes_BrokenMirrors
+## Notes: Broken Mirrors from Mirror Network (lvl 3)
+## Author: LightSpell
+## Version: 1.0
+## DefaultState: enabled
+## X-Category: Map
+## SavedVariables: HandyNotes_BrokenMirrorsDB
+## RequiredDeps: HandyNotes
+
+HandyNotes_BrokenMirrors.lua
