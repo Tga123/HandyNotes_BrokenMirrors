@@ -14,7 +14,7 @@ local defaults = { -- default settings of addon
 HNBM.db = LibStub("AceDB-3.0"):New("HandyNotes_BrokenMirrorsDB", defaults, true) -- AceDB-3.0 API, register "SavedVariables" variable from addon table of contents file (.toc) as AceDB managed database, and set "defaults" variable as default values of database
 
 HNBM.icons = {} -- empty table for icons
-for i = 1, 4 do -- preparete icons to use with HandyNotes, 4 of default map POI icons
+for i = 1, 4 do -- prepare icons to use with HandyNotes, 4 of default map POI icons
 	local left, right, top, bottom = GetPOITextureCoords(111+i)
 	HNBM.icons[i] = {
 		icon = [[Interface\Minimap\POIIcons]],
@@ -132,7 +132,7 @@ do -- "do .. end" container, HandyNotes authors recommend to do that
 		tooltip:Hide()
 	end
 
-	function HNBM:OnClick(button, down, uiMapID, coord) -- function required by HandyNotes API, it called when mouse click on pin, used to produce standart WoW waypoint, HandyNotes send here which button be pressed, up/down state, zone map id, and coordinates of pin (in HandyNotes format)
+	function HNBM:OnClick(button, down, uiMapID, coord) -- function required by HandyNotes API, it called when mouse click on pin, used to produce standard WoW waypoint, HandyNotes send here which button be pressed, up/down state, zone map id, and coordinates of pin (in HandyNotes format)
 		C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(uiMapID,HN:getXY(coord)))
 		C_SuperTrack.SetSuperTrackedUserWaypoint(true)
 	end
